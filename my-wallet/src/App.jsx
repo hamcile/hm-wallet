@@ -3,6 +3,7 @@ import './App.css'
 import Head from './components/header'
 import Assets from './pages/assets'
 import Login from './pages/login'
+import Register from './pages/register'
 
 function App() {
   return(
@@ -11,7 +12,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Assets/>}/>
-          <Route path='/landing' element= {<Login/>}/>
+          <Route path='/landing'> 
+            <Route path='' element= {<Login/>}/>
+            <Route path='register' element= {<Register/>}/>
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
